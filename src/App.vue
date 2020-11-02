@@ -1,57 +1,55 @@
 <template>
-<div id="app">
-  {{app_title}}
-</div>
+  <div id="app">
+    <Todos />
+  </div>
 </template>
 
 <script>
+// Imports
+import Todos from "./components/Todos";
+
 export default {
-  name: 'app',
+  name: "app",
 
   // Components
   components: {
-
+    Todos,
   },
 
   // Data Examples
   data() {
     return {
-      app_title: 'TVS-VUE',
-
       todos: [
-
         {
           id: 1,
           title: "todo One",
-          completed: false
+          completed: false,
         },
         {
           id: 2,
           title: "todo two",
-          completed: true
+          completed: true,
         },
         {
           id: 3,
           title: "todo three",
-          completed: false
-        }
-      ]
-
-    }
-  }
-}
+          completed: false,
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
-  *{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  body{
-    font-family:Arial,Helvetica,sans-serif;
-    line-height:1.4;
-  }
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
 </style>
