@@ -1,4 +1,5 @@
 # tvs-vue
+Just to learn more about Vue.js.
 
 ## Project setup
 ```
