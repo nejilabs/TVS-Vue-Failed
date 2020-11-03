@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <Todos v-bind:todos="todos" />
-  </div>
+<div id="app">
+  <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+</div>
 </template>
 
 <script>
@@ -19,8 +19,7 @@ export default {
   // Data Examples
   data() {
     return {
-      todos: [
-        {
+      todos: [{
           id: 1,
           title: "todo One",
           completed: false,
@@ -38,6 +37,12 @@ export default {
       ],
     };
   },
+  methods: {
+    deleteTodo(id) {
+      this.todos = this.todos.filter(todo => todo.id !== id);
+    }
+
+  } //methods
 };
 </script>
 
